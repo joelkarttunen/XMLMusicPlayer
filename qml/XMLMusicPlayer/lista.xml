@@ -1,0 +1,28 @@
+<lista>
+	<song>
+		<artist>Amon Amarth</artist>
+		<title>Deceiver of the gods</title>
+		<path>deceiver.mp3</path>
+		
+	</song>
+	<song>
+		<artist>Tirplane</artist>
+		<title>asdasd</title>
+		<path>triplane.mp3</path>
+	</song>
+	<song>
+		<artist>Leevi and the Leavings</artist>
+		<title>Mitä kuuluu marjaleena</title>
+		<path>marjaleena.mp3</path>
+	</song>
+	<song>
+		<artist>Turisas</artist>
+		<title>Battle Metal</title>
+		<path>battlemetal.mp3</path>
+	</song>
+	<song>
+		<artist>ss</artist>
+		<title>sss</title>
+		<path>stormi.mp3</path>
+	</song>
+</lista>
