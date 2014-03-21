@@ -8,7 +8,8 @@ QML_IMPORT_PATH =
 
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp \
-    playlist.cpp
+    playlist.cpp \
+    track.cpp
 
 
 # Installation path
@@ -21,6 +22,7 @@ qtcAddDeployment()
 OTHER_FILES +=
 
 HEADERS += \
-    playlist.h
+    playlist.h \
+    track.h
 
 
