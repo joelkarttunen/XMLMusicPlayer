@@ -100,7 +100,7 @@ Rectangle {
 
        model: penisModel
 
-       TableViewColumn{ role: "id"  ; title: "ID" ; width: 100 }
+       TableViewColumn{ role: "album"  ; title: "Album" ; width: 100 }
 
        TableViewColumn{ role: "artist"  ; title: "Artist" ; width: 100 }
        TableViewColumn{ role: "title" ; title: "Title" ; width: 200 }
@@ -197,12 +197,13 @@ Rectangle {
     XmlListModel {
         id: penisModel
         source: "lista.xml"
-        query: "/lista/song"
+        query: "/lista/artist/albums/album/tracklist/track"
 
-        XmlRole { name: "id"; query: "id/string()"}
-        XmlRole { name: "artist"; query: "artist/string()"}
+        XmlRole { name: "artist"; query: "artistname/string()"}
+        XmlRole { name: "album"; query: "albumname/string()"}
         XmlRole { name: "title"; query: "title/string()"}
         XmlRole { name: "path"; query: "path/string()" }
+
     }
 
     XmlListModel {
