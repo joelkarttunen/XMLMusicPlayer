@@ -10,7 +10,6 @@ QML_IMPORT_PATH =
 SOURCES += main.cpp
 
 
-
 # Installation path
 # target.path =
 

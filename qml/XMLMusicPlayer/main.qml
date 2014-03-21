@@ -3,7 +3,7 @@ import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 import QtQuick.XmlListModel 2.0
 import QtMultimedia 5.0
-
+import QtQuick.Dialogs 1.0
 
 Rectangle {
 
@@ -36,16 +36,63 @@ Rectangle {
                 id:btnNext
                 iconSource: "next.png"
             }
+
+            ToolButton
+            {
+                id:bntFolder
+                iconSource: "folder.png"
+                onClicked:
+                {
+                    fileDialog.visible = true
+                }
+            }
+
+            FileDialog {
+                id: fileDialog
+                title: "Please choose a penis"
+                selectFolder: true
+
+                onAccepted: {
+                    console.log("You chose: " + fileDialog.fileUrls)
+
+                }
+                onRejected: {
+                    console.log("Canceled")
+
+                }
+
+            }
+
             Slider{
                 id:sliderVolume;
                 Layout.fillWidth: true
-
+                value:1
             }
 
 
 
+            TextField
+            {
+                id:lastfmAccountName
+
+                text:"lastfm tunnus"
+
+            }
+            TextField
+            {
+                id:lastfmAccountPassword
+
+                text:"salasana"
+                echoMode: 2
+            }
+
         }
+
+
     }
+
+
+
     TableView {
        id:penisTable
 
@@ -60,10 +107,10 @@ Rectangle {
 
        TableViewColumn{ role: "path"  ; title: "Path" ; width: 100 }
 
-        onClicked:
-        {
+       onClicked:
+       {
             player.source = penisModel.get(penisTable.currentRow).path
-        }
+       }
 
     }
 
@@ -82,7 +129,7 @@ Rectangle {
             Rectangle
             {
                 anchors.fill: parent
-                color:"grey"
+                color:"green"
             }
             Text
             {
@@ -105,8 +152,8 @@ Rectangle {
                              {
                                 lastfmArea.width = 20
                                 arrowText.text = "<<"
+                             }
                            }
-                            }
 
 
             }
@@ -122,10 +169,6 @@ Rectangle {
             width: parent.width - lastfmExpander.width - penisTable.width
             delegate: lastfmDelegate
 
-
-
-
-
         }
     }
         Component{
@@ -137,16 +180,14 @@ Rectangle {
 
                          id:lastfmInfo
                          width:parent.width
+
                          anchors { top: parent.top; bottom: parent.bottom }
 
 
-                         Text {
-                                 text:"Times played: " + timesPlayed
-                                 font.pointSize: 20
-                              }
-
-
-
+                             Text {
+                                     text:"Times played: " + timesPlayed
+                                     font.pointSize: 20
+                                  }
 
                         }
 
@@ -167,7 +208,7 @@ Rectangle {
     XmlListModel {
         id: lastfmModel
 
-        source: "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=08209a57cb2d3a9c389028797cc109c8&username=kindjall&artist="+penisModel.get(penisTable.currentRow).artist + "&track=" +penisModel.get(penisTable.currentRow).title
+        source: "http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=08209a57cb2d3a9c389028797cc109c8&username=" +lastfmAccountName.text + "&artist="+penisModel.get(penisTable.currentRow).artist + "&track=" +penisModel.get(penisTable.currentRow).title
 
         query: "/lfm/track"
 
@@ -195,7 +236,6 @@ Rectangle {
             text: player.error
         }
     }
-
 
 }
 
