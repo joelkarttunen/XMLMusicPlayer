@@ -1,6 +1,6 @@
 #include <QtGui/QGuiApplication>
 #include "qtquick2applicationviewer.h"
-#include <QtMultimedia>
+
 
 
 int main(int argc, char *argv[])
