@@ -2,18 +2,27 @@
 #define PLAYLIST_H
 
 #include <QObject>
+#include <QDir>
+#include <QXmlStreamWriter>
+#include <QFile>
 
-class playlist : public QObject
+#include <QtMultimedia/QMediaPlayer>
+
+class Playlist : public QObject
 {
     Q_OBJECT
-public:
-    explicit playlist(QObject *parent = 0);
 
+
+public:
+    explicit Playlist(QObject *parent = 0);
+    Q_INVOKABLE void createPlaylist( QString filepath);
 
 signals:
 
 public slots:
 
+private:
+    QStringList listFiles(QDir dir);
 };
 
 #endif // PLAYLIST_H

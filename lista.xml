@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista>
+    <track>
+        <title></title>
+        <artist></artist>
+        <path>C:/Users/joel/Documents/Koodi/XMLMusicPlayer/qml/XMLMusicPlayer/battlemetal.mp3</path>
+    </track>
+    <track>
+        <title></title>
+        <artist></artist>
+        <path>C:/Users/joel/Documents/Koodi/XMLMusicPlayer/qml/XMLMusicPlayer/deceiver.mp3</path>
+    </track>
+    <track>
+        <title></title>
+        <artist></artist>
+        <path>C:/Users/joel/Documents/Koodi/XMLMusicPlayer/qml/XMLMusicPlayer/marjaleena.mp3</path>
+    </track>
+    <track>
+        <title></title>
+        <artist></artist>
+        <path>C:/Users/joel/Documents/Koodi/XMLMusicPlayer/qml/XMLMusicPlayer/stormi.mp3</path>
+    </track>
+    <track>
+        <title></title>
+        <artist></artist>
+        <path>C:/Users/joel/Documents/Koodi/XMLMusicPlayer/qml/XMLMusicPlayer/triplane.mp3</path>
+    </track>
+</lista>

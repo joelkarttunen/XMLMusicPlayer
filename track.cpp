@@ -5,19 +5,19 @@ track::track(QObject *parent) :
 {
 
 }
-QString track::tittle() const
+QString track::title() const
 {
-    return m_tittle;
+    return m_title;
 }
-void track::setTittle(const QString &tittle)
+void track::setTitle(const QString &title)
 {
-    m_tittle = tittle;
+    m_title = title;
 }
 
 
 QString track::artist() const
 {
-    return artist;
+    return m_artist;
 }
 void track::setArtist(const QString &artist)
 {
