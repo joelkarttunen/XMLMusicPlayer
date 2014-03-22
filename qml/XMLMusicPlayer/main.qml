@@ -199,6 +199,7 @@ Rectangle {
     XmlListModel {
         id: penisModel
         source: "lista.xml"
+<<<<<<< HEAD
 
 
 
@@ -208,6 +209,13 @@ Rectangle {
         XmlRole { name: "artist"; query: "ancestor::artist/artistname/string()"}
         XmlRole { name: "album"; query: "albums/album/albumname/string()"}
         XmlRole { name: "title"; query: "albums/album/tracklist/track/title/string()"}
+=======
+        query: "/lista/artist/albums/album/tracklist/track"
+
+        XmlRole { name: "artist"; query: "artistname/string()"}
+        XmlRole { name: "album"; query: "albumname/string()"}
+        XmlRole { name: "title"; query: "title/string()"}
+>>>>>>> 81648989aec5e138e4fc3d554d3de6db82227d19
         XmlRole { name: "path"; query: "path/string()" }
 
     }
